@@ -3028,11 +3028,11 @@ fi
 done
 
 
-        if test "$ac_cv_header_OPENCL_cl2_hpp" != no
+        if test "$ac_cv_header_OpenCL_cl2_hpp" != no
         then
             D_CL_HPP=-DHAVE_OPENCL_CL2_HPP
         else
-            if test "$ac_cv_header_OPENCL_cl_hpp" == no
+            if test "$ac_cv_header_OpenCL_cl_hpp" == no
             then
                 as_fn_error $? "\"No OpenCL C++ API; try installing opencl-headers\"" "$LINENO" 5
             fi

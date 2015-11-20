@@ -20,11 +20,11 @@ case $host_os in
         AC_CHECK_HEADERS("OpenCL/cl2.hpp")
         AC_CHECK_HEADERS("OpenCL/cl.hpp")
 
-        if test "$ac_cv_header_OPENCL_cl2_hpp" != no
+        if test "$ac_cv_header_OpenCL_cl2_hpp" != no
         then
             D_CL_HPP=-DHAVE_OPENCL_CL2_HPP
         else
-            if test "$ac_cv_header_OPENCL_cl_hpp" == no
+            if test "$ac_cv_header_OpenCL_cl_hpp" == no
             then
                 AC_MSG_ERROR("No OpenCL C++ API; try installing opencl-headers")
             fi
