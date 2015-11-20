@@ -18,8 +18,6 @@ before_install:
   - sudo mv cl.hpp /System/Library/Frameworks/OpenCL.framework/Headers/cl.hpp
   - chmod 755 ./travis-tool.sh
   - ./travis-tool.sh bootstrap
-  - git clone http://github.com/cdeterman/RViennaCL.git
-  - R CMD INSTALL RViennaCL/
 
 install:
   - ./travis-tool.sh install_deps 
