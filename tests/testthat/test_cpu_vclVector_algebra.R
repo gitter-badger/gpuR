@@ -18,7 +18,7 @@ E <- rnorm(ORDER-1)
 
 
 test_that("vclVector Single Precision Inner Product successful", {
-    
+    skip_on_travis()
     C <- A %*% B
     
     fvclA <- vclVector(A, type="float")
@@ -32,7 +32,7 @@ test_that("vclVector Single Precision Inner Product successful", {
 })
 
 test_that("vclVector Double Precision Inner Product successful", {
-    
+    skip_on_travis()
     C <- A %*% B
     
     dvclA <- vclVector(A, type="double")

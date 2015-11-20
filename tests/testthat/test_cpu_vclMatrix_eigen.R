@@ -24,6 +24,7 @@ nV <- nE$values
 
 test_that("vclMatrix Symmetric Single Precision Matrix Eigen Decomposition",
 {    
+    skip_on_travis()
     fgpuX <- vclMatrix(X, type="float")
     
     E <- eigen(fgpuX, symmetric=TRUE)
@@ -42,6 +43,7 @@ test_that("vclMatrix Symmetric Single Precision Matrix Eigen Decomposition",
 
 test_that("vclMatrix Symmetric Double Precision Matrix Eigen Decomposition", 
 {    
+    skip_on_travis()
     fgpuX <- vclMatrix(X, type="double")
     
     E <- eigen(fgpuX, symmetric=TRUE)

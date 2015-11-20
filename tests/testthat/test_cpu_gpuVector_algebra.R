@@ -19,6 +19,8 @@ E <- rnorm(ORDER-1)
 
 test_that("gpuVector Single Precision Inner Product successful", {
     
+    skip_on_travis()
+    
     C <- A %*% B
     
     fvclA <- gpuVector(A, type="float")
@@ -33,7 +35,7 @@ test_that("gpuVector Single Precision Inner Product successful", {
 })
 
 test_that("gpuVector Double Precision Inner Product successful", {
-    
+    skip_on_travis()
     C <- A %*% B
     
     dvclA <- gpuVector(A, type="double")

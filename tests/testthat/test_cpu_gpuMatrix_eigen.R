@@ -25,6 +25,8 @@ nV <- nE$values
 test_that("CPU gpuMatrix Symmetric Single Precision Matrix Eigen Decomposition",
 {
     
+    skip_on_travis()
+    
     fgpuX <- gpuMatrix(X, type="float")
     
     E <- eigen(fgpuX, symmetric=TRUE)
@@ -43,7 +45,7 @@ test_that("CPU gpuMatrix Symmetric Single Precision Matrix Eigen Decomposition",
 
 test_that("CPU gpuMatrix Symmetric Double Precision Matrix Eigen Decomposition", 
 {
-    
+    skip_on_travis()
     fgpuX <- gpuMatrix(X, type="double")
     
     E <- eigen(fgpuX, symmetric=TRUE)
