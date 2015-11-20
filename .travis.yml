@@ -14,7 +14,7 @@ before_install:
   - sudo brew update
   - clang -v
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-  - wget https://www.khronos.org/registry/cl/api/1.2/cl.hpp
+  - wget https://www.khronos.org/registry/cl/api/2.1/cl.hpp
   - sudo mv cl.hpp /System/Library/Frameworks/OpenCL.framework/Headers/cl.hpp
   - chmod 755 ./travis-tool.sh
   - ./travis-tool.sh bootstrap
