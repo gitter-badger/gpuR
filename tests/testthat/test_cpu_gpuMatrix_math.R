@@ -46,7 +46,7 @@ test_that("CPU gpuMatrix Single Precision Matrix Element-Wise Trignometry", {
                  check.attributes=FALSE)  
 #     expect_equal(fgpuAS[,], Asin, tolerance=1e-07, 
 #                  info="arc sin float matrix elements not equivalent",
-                 check.attributes=FALSE)  
+#                  check.attributes=FALSE)  
     expect_equal(fgpuHS[,], Hsin, tolerance=1e-07, 
                  info="hyperbolic sin float matrix elements not equivalent",
                  check.attributes=FALSE)  
